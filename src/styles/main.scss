@@ -1,0 +1,31 @@
+@import '~bulma/bulma.sass';
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.quotesCardContainer {
+  margin: 20px;
+}
+
+#AllQuotes {
+  height: 90vh;
+  overflow: scroll;
+}
+
+#filters {
+  height: 60vh;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
