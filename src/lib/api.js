@@ -11,23 +11,19 @@ export function getAllTags() {
 
 export async function getApiData() {
   try {
-    const getQuotes = await getQuotes()
-    const getTags = await getAllTags()
+    const getQuotesRes = await getQuotes()
+    const getTagsRes = await getAllTags()
     let quoteId = 0
-    let tagId = 0
-    const quotes = getQuotes.data.quotes
-    const tags = getTags.data.tags
+    const quotes = getQuotesRes.data.quotes
+    const tags = getTagsRes.data.tags
     const newQuotes = quotes.map(quote => {
       quoteId++
       return { ...quote, id: quoteId }
     })
-    const newTags = tags.map(tag => {
-      tagId++
-      return { ...tag, id: tagId }
-    })
     localStorage.setItem('quotes', JSON.stringify(newQuotes))
-    localStorage.setItem('tags', JSON.stringify(newTags))
+    localStorage.setItem('tags', JSON.stringify(tags))
+    return false
   } catch (err) {
-    console.log(err)
+    return true
   }
 }

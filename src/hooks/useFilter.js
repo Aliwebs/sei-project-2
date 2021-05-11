@@ -9,6 +9,7 @@ export function useFilter(searchData) {
     const filteredTag = originalQuotes.filter(quote => quote.tag === searchForm.tag || searchForm.tag === 'All')
     const filteredAuthor = filteredTag.filter(quote => quote.author.toLowerCase().includes(searchForm.searchField.toLowerCase()) || searchForm.searchField === '')
     setFilteredQuotes(filteredAuthor)
+    return filteredAuthor
   }
   return {
     searchForm,
