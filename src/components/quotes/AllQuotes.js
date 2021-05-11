@@ -1,39 +1,17 @@
-import { useEffect, useState } from 'react'
-
-import QuoteCard from "./QuoteCard"
-import { getAllTags } from '../../lib/api'
-
+import React from 'react'
+import QuoteCard from './QuoteCard'
+import { useFilter } from '../../hooks/useFilter'
 function AllQuotes() {
-  const [originalQuotes] = useState(JSON.parse(localStorage.getItem('quotes')))
-  const [quotesArray, setQuotesArray] = useState(JSON.parse(localStorage.getItem('quotes')))
+  const quotes = JSON.parse(localStorage.getItem('quotes'))
+  const tags = JSON.parse(localStorage.getItem('tags'))
 
-  const [allTags, setAllTags] = useState(null)
-  const [selectedTag, setSelectedTag] = useState('All')
-  const [searchTerm, setSearchTerm] = useState('')
-
-  useEffect(() => {
-    const getData = async () => {
-      const res = await getAllTags()
-      setAllTags(res.data.tags)
-    }
-    getData()
-  }, [])
-
-  const handleChange = ({ target: { value } }) => {
-    setSelectedTag(value)
-    const filteredTag = originalQuotes.filter(quote => quote.tag === value || value === 'All')
-    const filteredAuthor = filteredTag.filter(quote => quote.author.toLowerCase().includes(searchTerm.toLowerCase()) || searchTerm === '')
-    setQuotesArray(filteredAuthor)
-  }
-
-  const handleInput = ({ target: { value } }) => {
-    setSearchTerm(value)
-    const filteredTag = originalQuotes.filter(quote => quote.tag === selectedTag || selectedTag === 'All')
-    const filteredAuthor = filteredTag.filter(quote => quote.author.toLowerCase().includes(value.toLowerCase()) || value === '')
-    setQuotesArray(filteredAuthor)
-  }
-
-
+  const { searchForm, handleChange, filterQuotes, filteredQuotes } = useFilter({
+    tag: 'All',
+    searchField: '',
+  })
+  React.useEffect(() => {
+    filterQuotes(quotes)
+  }, [searchForm])
   return (
     <section className="section">
       <div className="container">
@@ -43,24 +21,24 @@ function AllQuotes() {
             <div className="field">
               <label className="label has-text-centered">Filter By Tag</label>
               <div className="select is-link">
-                <select value={selectedTag} onChange={handleChange}>
+                <select name="tag" onChange={handleChange}>
                   <option value="All">All</option>
-                  {allTags && allTags.map(tag => (
-                    <option key={tag.name} value={tag.name} >{tag.name}</option>
+                  {tags && tags.map(tag => (
+                    <option key={tag.id} value={tag.name} >{tag.name}</option>
                   ))}
                 </select>
               </div>
               <div className="field">
                 <label className="label has-text-centered">Search By Author</label>
                 <div className="control">
-                  <input className="input" value={searchTerm} onChange={handleInput} />
+                  <input className="input" name="searchField" onChange={handleChange} />
                 </div>
               </div>
             </div>
           </div>
           <div className="column" id="AllQuotes">
-            {quotesArray ? (
-              quotesArray.map(quote => (
+            {filteredQuotes ? (
+              filteredQuotes.map(quote => (
                 <div key={quote.id}>
                   <QuoteCard  {...quote} />
                 </div>
@@ -75,5 +53,4 @@ function AllQuotes() {
     </section>
   )
 }
-
 export default AllQuotes

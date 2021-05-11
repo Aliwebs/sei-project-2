@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import React from 'react'
 import QuoteCard from './QuoteCard'
 
 function RandomQuote() {
   const quotesArray = JSON.parse(localStorage.getItem('quotes'))
-  const [randomQuote, setRandomQuote] = useState(quotesArray[Math.floor(Math.random() * quotesArray.length)])
+  const [randomQuote, setRandomQuote] = React.useState(quotesArray[Math.floor(Math.random() * quotesArray.length)])
 
   const handleClick = () => {
     setRandomQuote(quotesArray[Math.floor(Math.random() * quotesArray.length)])

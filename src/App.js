@@ -1,30 +1,12 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { useEffect, } from 'react'
-
-import { getQuotes } from './lib/api'
-
-import Navbar from './components/common/Navbar'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './components/common/Home'
-import RandomQuote from './components/quotes/RandomQuote'
+import Navbar from './components/common/Navbar'
 import AllQuotes from './components/quotes/AllQuotes'
-
+import RandomQuote from './components/quotes/RandomQuote'
+import { getApiData } from './lib/api'
 function App() {
-  let number = 1
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const res = await getQuotes()
-        const resWithId = res.data.quotes.map(quote => {
-          number++
-          return { ...quote, id: number }
-        })
-        localStorage.setItem('quotes', JSON.stringify(resWithId))
-      } catch (err) {
-        console.log(err.response)
-      }
-    }
-    getData()
-  }, [])
+
+  getApiData()
 
   return (
     <Router>
@@ -37,5 +19,4 @@ function App() {
     </Router>
   )
 }
-
 export default App
