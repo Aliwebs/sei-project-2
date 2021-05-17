@@ -12,6 +12,7 @@ function App() {
   getApiData().then(data => {
     setIsError(data)
   })
+  //helo
   if (localStorage.getItem('dislike') === null) {
     localStorage.setItem('dislike', JSON.stringify([]))
   }

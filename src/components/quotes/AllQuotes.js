@@ -2,7 +2,6 @@
 import React from 'react'
 import QuoteCard from './QuoteCard'
 import { useFilter } from '../../hooks/useFilter'
-import { useState } from 'react'
 import Error from '../common/Error'
 
 
