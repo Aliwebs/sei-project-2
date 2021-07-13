@@ -4,7 +4,7 @@
 
 ### Summary
 
-The assignment was to create a react app rendered in a web browser, with data consummed from a public API, in a team of 2.
+The assignment was to create a react app rendered in a web browser, with data consumed from a public API, in a team of 2.
 
 For the MVP version, we choose to make a quote bank app, with the following features supported:
 - Users can pull a single random quote.
@@ -17,10 +17,10 @@ Stretch goals/additional features to be built upon the MVP:
 - Like/Dislike button
   - Where 'Like' adds more quotes from the same author, displayed at the top of all the quotes.
   - Where 'Dislike' removes the quote to be displayed.
-- Pick random quote from selected tag.
+- Pick a random quote from the selected tag.
 - Consolidate current API data with an additional API to augment UX.
 
-Once that the scope of our tasks was defined, we proceeded to build wireframes.
+Once the scope of our tasks was defined, we proceeded to build wireframes.
 
 #### Landing Page
 ![Landing Page](./screenshots/LandingPage.png "Home Page")
@@ -29,7 +29,7 @@ Once that the scope of our tasks was defined, we proceeded to build wireframes.
 #### Random Quote Page
 ![Random Quote Page](./screenshots/RandomQuote.png "Random Quote Page")
 
-### Technologies
+### Technologies Used
 - HTML
 - SCSS
 - Javascript/JSX
@@ -43,7 +43,7 @@ Once that the scope of our tasks was defined, we proceeded to build wireframes.
 ### API Documentation
 [GoQuotes API](https://goquotes.docs.apiary.io/#)
 
-### Functionnalities
+### Approach
 
 #### Filter
 We added a filter section inside the quotes page, the user can filter by author & tag. To achieve this we had a filteredArray that was a copy of the allQuotes array but with filtered items, then we rendered the filtered array inside react.
@@ -64,14 +64,14 @@ We added a filter section inside the quotes page, the user can filter by author 
         || searchForm.searchField === '')
      )
     }
-    setFilteredQuotes(filteredAuthor)
+    setFilter Quotes(filteredAuthor)
     return filteredAuthor
   }
 ```
 As you can see in the code above, we check for if the tag or author matched and if they did we would return the quote, also we would return if the tag was 'All' or the author search term was empty.
 
 ### Get/Display Random Quote
-For the random quote we picked a number between 0 and the quotesArray length as the index and choose the item with the same index from the quotesArray as the choosen randomQuote.
+For the random quote we picked a number between 0 and the quotesArray length as the index and chose the item with the same index from the quotesArray as the chosen randomQuote.
 ```js
   const [randomQuote, setRandomQuote] = React.useState(
     !!quotesArray &&
@@ -82,15 +82,18 @@ For the random quote we picked a number between 0 and the quotesArray length as 
 ```
 
 ### In-app Screenshots
+Random Quote Page:
 ![random quote page](./screenshots/randomPageScreenshot.png "random quote page")
+Quotes Page:
 ![Quotes page](./screenshots/quotesPageScreenshot.png "Quote page")
 
 ### Lessons Learnt
 We could have done a better job at planning tasks for each person during this project.
-Collaboration tools are very important and effect workflow of the team. 
-Console log a lot it's the best way to debug your application. 
+Collaboration tools are very important and affect the workflow of the team. 
+Console log a lot. It's the best way to debug your application. 
 Making multiple API calls was a bit confusing, we had a few problems with that but we got it working in the end.
-We wanted to make as less API calls as we could so we loaded the data in APP.js and saved it to local storage. 
+We wanted to make as few API calls as we could so we loaded the data in APP.js and saved it to local storage. 
 ### Credits
 [API](https://goquotes.docs.apiary.io/) used is called GO Quotes, it's an open source API that provides quotes.
 [Axios](https://bulma.io/documentation/overview/) Bulma is a free, open source framework that provides ready-to-use frontend components that you can combine to build responsive web interfaces.
+
