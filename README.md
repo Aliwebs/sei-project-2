@@ -1,6 +1,6 @@
 # ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Reacathon
 
-## Quotetionary 
+## [Quotetionary](https://ga-quotetionary.netlify.app/)
 
 ### Summary
 
@@ -47,7 +47,7 @@ Once the scope of our tasks was defined, we proceeded to build wireframes.
 
 #### Filter
 We added a filter section inside the quotes page, the user can filter by author & tag. To achieve this we had a filteredArray that was a copy of the allQuotes array but with filtered items, then we rendered the filtered array inside react.
-```js
+```javascript
   const handleChange = e => {
     setSearchForm({ ...searchForm, [e.target.name]: e.target.value })
   }
@@ -72,7 +72,7 @@ As you can see in the code above, we check for if the tag or author matched and 
 
 ### Get/Display Random Quote
 For the random quote we picked a number between 0 and the quotesArray length as the index and chose the item with the same index from the quotesArray as the chosen randomQuote.
-```js
+```javascript
   const [randomQuote, setRandomQuote] = React.useState(
     !!quotesArray &&
     quotesArray[Math.floor(Math.random() * quotesArray.length)])
@@ -86,6 +86,13 @@ Random Quote Page:
 ![random quote page](./screenshots/randomPageScreenshot.png "random quote page")
 Quotes Page:
 ![Quotes page](./screenshots/quotesPageScreenshot.png "Quote page")
+### Bugs 
+One bug is that in the filter section of the quotes page we could not center the dropdown, this was mainly because we used bulma for styling so something was conflicting and we could not figure it out. 
+Pages will sometimes go blank if going straight to anything but the home page.
+### Future Features:
+A better design for the app as the quotes page can be improved quite a bit.
+Use other API’s to add more quotes to the website.
+Add a like functionality and recommend based on that.
 
 ### Lessons Learnt
 We could have done a better job at planning tasks for each person during this project.
