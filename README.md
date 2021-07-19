@@ -24,6 +24,39 @@ Stretch goals/additional features to be built upon the MVP:
 
 Once the scope of our tasks was defined, we proceeded to build wireframes. This was so we could get an idea of how we wanted the application to look like in the end, it was also here where we decided where to put what functionality.
 
+### Brief
+
+- Consume a public API
+- Have several components - at least one classical and one functional
+- Stick with KISS (Keep It Simple Stupid) and DRY (Don't Repeat Yourself) principles
+- Project deployed online and accessible to the public
+- Have semantically clean HTML
+
+
+### Table of contents
+
+- [!logo Project #2: Reacathon](#-project-2-reacathon)
+  - [Quotetionary](#quotetionary)
+    - [Summary](#summary)
+    - [Brief](#brief)
+    - [Table of contents](#table-of-contents)
+      - [Landing Page](#landing-page)
+      - [Quotes Pages](#quotes-pages)
+      - [Random Quote Page](#random-quote-page)
+    - [Technologies Used](#technologies-used)
+    - [Libraries](#libraries)
+    - [API Documentation](#api-documentation)
+    - [Approach](#approach)
+      - [Filter](#filter)
+      - [Get/Display Random Quote](#getdisplay-random-quote)
+    - [In-app Screenshots](#in-app-screenshots)
+    - [Bugs](#bugs)
+    - [Future Features](#future-features)
+    - [Wins](#wins)
+    - [Challenges](#challenges)
+    - [Lessons Learnt](#lessons-learnt)
+    - [Credits](#credits)
+
 #### Landing Page
 
 ![Landing Page](./screenshots/LandingPage.png "Home Page")
@@ -42,6 +75,7 @@ Once the scope of our tasks was defined, we proceeded to build wireframes. This 
 - SCSS
 - JavaScript/JSX
 - React
+- Postman
 - Git & GitHub
 
 ### Libraries
@@ -55,7 +89,7 @@ Once the scope of our tasks was defined, we proceeded to build wireframes. This 
 
 ### Approach
 
-We started implementing all the features we listed down in our notes one by one while also following the wireframes to position stuff appropriately.
+We started implementing all the features we listed down in our notes one by one while also following the wireframes to position stuff appropriately. We collaborated by programming together while in a zoom breakout room so communication was instantaneous. To keep track of progress we had all the features we wanted noted down in notes and we were crossing stuff out as we went along.
 
 #### Filter
 
@@ -85,7 +119,7 @@ We added a filter section inside the quotes page, the user can filter by author 
 
 As you can see in the code above, we check for if the tag or author matched and if they did we would return the quote, also we would return if the tag was 'All' or the author search term was empty.
 
-### Get/Display Random Quote
+#### Get/Display Random Quote
 
 For the random quote we picked a number between 0 and the quotesArray length as the index and choose the item with the same index from the quotesArray as the chosen randomQuote.
 
