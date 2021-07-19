@@ -35,39 +35,25 @@ Once the scope of our tasks was defined, we proceeded to build wireframes. This 
 
 ### Table of contents
 
-- [!logo Project #2: Reacathon](#-project-2-reacathon)
-  - [Quotetionary](#quotetionary)
-    - [Summary](#summary)
-    - [Brief](#brief)
-    - [Table of contents](#table-of-contents)
-      - [Landing Page](#landing-page)
-      - [Quotes Pages](#quotes-pages)
-      - [Random Quote Page](#random-quote-page)
-    - [Technologies Used](#technologies-used)
-    - [Libraries](#libraries)
-    - [API Documentation](#api-documentation)
-    - [Approach](#approach)
-      - [Filter](#filter)
-      - [Get/Display Random Quote](#getdisplay-random-quote)
-    - [In-app Screenshots](#in-app-screenshots)
-    - [Bugs](#bugs)
-    - [Future Features](#future-features)
-    - [Wins](#wins)
-    - [Challenges](#challenges)
-    - [Lessons Learnt](#lessons-learnt)
-    - [Credits](#credits)
-
-#### Landing Page
-
-![Landing Page](./screenshots/LandingPage.png "Home Page")
-
-#### Quotes Pages
-
-![Quotes Pages](./screenshots/AllQuotes.png "Quotes Page")
-
-#### Random Quote Page
-
-![Random Quote Page](./screenshots/RandomQuote.png "Random Quote Page")
+- [Quotetionary](#quotetionary)
+  - [Summary](#summary)
+  - [Brief](#brief)
+  - [Landing Page](#landing-page)
+  - [Quotes Pages](#quotes-pages)
+  - [Random Quote Page](#random-quote-page)
+  - [Technologies Used](#technologies-used)
+  - [Libraries](#libraries)
+  - [API Documentation](#api-documentation)
+  - [Approach](#approach)
+    - [Filter](#filter)
+    - [Get/Display Random Quote](#getdisplay-random-quote)
+  - [In-app Screenshots](#in-app-screenshots)
+  - [Bugs](#bugs)
+  - [Future Features](#future-features)
+  - [Wins](#wins)
+  - [Challenges](#challenges)
+  - [Lessons Learnt](#lessons-learnt)
+  - [Credits](#credits)
 
 ### Technologies Used
 
@@ -132,12 +118,23 @@ For the random quote we picked a number between 0 and the quotesArray length as 
  }
 ```
 
-### In-app Screenshots
+### Screenshots
+
+Landing Page wireframe
+![Landing Page](./screenshots/LandingPage.png "Home Page")
+
+Quotes Pages wireframe
+![Quotes Pages](./screenshots/AllQuotes.png "Quotes Page")
+
+Random Quote Page wireframe
+![Random Quote Page](./screenshots/RandomQuote.png "Random Quote Page")
 
 Random Quote Page:
 ![random quote page](./screenshots/randomPageScreenshot.png "random quote page")
+
 Quotes Page:
 ![Quotes page](./screenshots/quotesPageScreenshot.png "Quote page")
+
 
 ### Bugs
 
