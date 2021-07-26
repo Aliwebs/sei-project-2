@@ -75,7 +75,7 @@ Once the scope of our tasks was defined, we proceeded to build wireframes. This 
 
 ### Approach
 
-We started implementing all the features we listed down in our notes one by one while also following the wireframes to position stuff appropriately. We collaborated by programming together while in a zoom breakout room so communication was instantaneous. To keep track of progress we had all the features we wanted noted down in notes and we were crossing stuff out as we went along.
+We started implementing all the features we listed down in our notes one by one while also following the wireframes to position stuff appropriately. We collaborated by programming together while in a Zoom breakout room so communication was instantaneous. To keep track of progress we had all the features we wanted noted down in notes and we were crossing stuff out as we went along. For the API we used GoQuotes, this was a public API that gave us a lot of options when getting quotes, we didn't use all of the endpoints but having them there allows for more options in the future.
 
 #### Filter
 
