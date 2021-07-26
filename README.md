@@ -1,4 +1,6 @@
-# ![logo](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Project #2: Reacathon
+<img src ="https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png" alt="logo"> 
+
+# Project #2: Reacathon
 
 ## [Quotetionary](https://ga-quotetionary.netlify.app/)
 
@@ -35,25 +37,24 @@ Once the scope of our tasks was defined, we proceeded to build wireframes. This 
 
 ### Table of contents
 
-- [Quotetionary](#quotetionary)
-  - [Summary](#summary)
-  - [Brief](#brief)
-  - [Landing Page](#landing-page)
-  - [Quotes Pages](#quotes-pages)
-  - [Random Quote Page](#random-quote-page)
-  - [Technologies Used](#technologies-used)
-  - [Libraries](#libraries)
-  - [API Documentation](#api-documentation)
-  - [Approach](#approach)
-    - [Filter](#filter)
-    - [Get/Display Random Quote](#getdisplay-random-quote)
-  - [In-app Screenshots](#in-app-screenshots)
-  - [Bugs](#bugs)
-  - [Future Features](#future-features)
-  - [Wins](#wins)
-  - [Challenges](#challenges)
-  - [Lessons Learnt](#lessons-learnt)
-  - [Credits](#credits)
+- [Project #2: Reacathon](#project-2-reacathon)
+  - [Quotetionary](#quotetionary)
+    - [Summary](#summary)
+    - [Brief](#brief)
+    - [Table of contents](#table-of-contents)
+    - [Technologies Used](#technologies-used)
+    - [Libraries](#libraries)
+    - [API Documentation](#api-documentation)
+    - [Approach](#approach)
+      - [Filter](#filter)
+      - [Get/Display Random Quote](#getdisplay-random-quote)
+    - [Screenshots](#screenshots)
+    - [Bugs](#bugs)
+    - [Future Features](#future-features)
+    - [Wins](#wins)
+    - [Challenges](#challenges)
+    - [Lessons Learnt](#lessons-learnt)
+    - [Credits](#credits)
 
 ### Technologies Used
 
@@ -121,20 +122,19 @@ For the random quote we picked a number between 0 and the quotesArray length as 
 ### Screenshots
 
 Landing Page wireframe
-![Landing Page](./screenshots/LandingPage.png "Home Page")
+<img src="./screenshots/LandingPage.png" alt="Home Page">
 
 Quotes Pages wireframe
-![Quotes Pages](./screenshots/AllQuotes.png "Quotes Page")
+<img src="./screenshots/AllQuotes.png" alt="Quotes Page">
 
 Random Quote Page wireframe
-![Random Quote Page](./screenshots/RandomQuote.png "Random Quote Page")
+<img src="./screenshots/RandomQuote.png" alt="Random Quote Page">
 
 Random Quote Page:
-![random quote page](./screenshots/randomPageScreenshot.png "random quote page")
+<img src="./screenshots/randomPageScreenshot.png" alt="random quote page">
 
 Quotes Page:
-![Quotes page](./screenshots/quotesPageScreenshot.png "Quote page")
-
+<img src="./screenshots/quotesPageScreenshot.png" alt="Quote page">
 
 ### Bugs
 
